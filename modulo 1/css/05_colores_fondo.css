@@ -1,0 +1,12 @@
+.fondo {
+    color:rgb(212, 212, 212); 
+    background-image: url('../html/imagenes/imagenfondo.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(55, 82, 156);
+    opacity: 0.9;
+    padding: 40px;
+    text-align: center;
+    font-size: 20px;
+}
