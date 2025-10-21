@@ -4,8 +4,8 @@
     100% { transform: translateX(0); background-color: cadetblue;}
 }
 .caja {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 50px;
   background-color: chocolate;
   animation: mover 3s infinite ease-in-out;
   display: flex;

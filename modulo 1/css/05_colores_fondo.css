@@ -1,6 +1,5 @@
 .fondo {
     color:rgb(212, 212, 212); 
-    background-image: url('../html/imagenes/imagenfondo.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
