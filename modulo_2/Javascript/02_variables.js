@@ -29,6 +29,8 @@ const persona={
     nombre: "Alejandro",
     edad: 20
 }
+
+console.log("Tipo Objeto", typeof (persona));
 console.log(persona);
 console.log(persona.edad);
 console.log(persona.nombre);
