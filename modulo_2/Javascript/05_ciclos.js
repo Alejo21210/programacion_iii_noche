@@ -13,3 +13,7 @@ let paises="Ecuador";
 for(let i=0;i<paises.length;i++){
     console.log(paises[i]);
 }
+
+for (let i=1; i<=5; i++){
+    console.log(`Cuadrado de ${i} es ${i*i}`);
+}

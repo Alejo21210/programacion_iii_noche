@@ -39,7 +39,7 @@ const dia = "lunes";
 switch (dia) {
     case "lunes":
     case "martes":
-    case "miércoles":
+    case "miercoles":
     case "jueves":
     case "viernes":
         console.log("Es un día laborable");
