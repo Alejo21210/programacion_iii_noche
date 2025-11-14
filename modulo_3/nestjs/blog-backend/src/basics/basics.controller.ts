@@ -45,4 +45,12 @@ export class BasicsController {
     ) {
     return this.basicsService.delete(id);
     }
+
+    @Post(':dosParametros')
+    createWithTwoParameters(
+        @Param('dosParametros') dosParametros: string,
+        @Body() body: { nombre: string; edad: number }
+    ) {
+        return this.basicsService.verificarPermiso(body.nombre, body.edad, dosParametros);
+    }
 }

@@ -62,5 +62,24 @@ export class BasicsService {
             message: 'Funcion con método DELETE',
             parameter: parameter
         };
-    }   
+    }
+    verificarPermiso(nombre: string, edad: number, dosParametros: string): object {
+        if (edad >= 18) {
+            return {
+                nombre: nombre,
+                edad: edad,
+                permiso: true,
+                mensaje: `${nombre} puede manejar`,
+                parametro: dosParametros
+            };
+        } else {
+            return {
+                nombre: nombre,
+                edad: edad,
+                permiso: false,
+                mensaje: `${nombre} no puede manejar`,
+                parametro: dosParametros
+            };
+        }
+    }  
 }
