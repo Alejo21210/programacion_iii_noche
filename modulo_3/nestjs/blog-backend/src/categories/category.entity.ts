@@ -1,4 +1,4 @@
-import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('categories')
 export class Category {
@@ -6,5 +6,5 @@ export class Category {
   id: string;
 
   @Column()
-    name: string;
+  name: string;
 }

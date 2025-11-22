@@ -81,5 +81,48 @@ export class BasicsService {
                 parametro: dosParametros
             };
         }
-    }  
+    }
+    
+    areaTriangulo(parameter:any): object {
+        const area = (parameter.base * parameter.altura) / 2;
+        return {
+            service: 'Blog Backend API',
+            function: 'calculo area triangulo',
+            message: 'Funcion para calcular el área de un triángulo',
+            parameter:parameter,
+            area: area
+        };
+    }
+    calcularPromedio(nota1: number, nota2: number, nota3: number): object {
+        nota1 = Number(nota1);
+        nota2 = Number(nota2);
+        nota3 = Number(nota3);
+        const promedio = (nota1 + nota2 + nota3) / 3;
+        return {
+            service: 'Blog Backend API',
+            function: 'basics peticion post',
+            message: 'Funcion para calcular el promedio de tres notas',
+            nota1: nota1,
+            nota2: nota2,
+            nota3: nota3,
+            promedio: promedio
+        };
+    }
+
+    verificarCredito(edad: number, ingresos: number, historialCrediticio: string): object {
+        let aprobarCredito = "No";
+
+        if(edad >= 20 && ingresos>=2000&&historialCrediticio==="bueno"){
+            aprobarCredito = "Si";
+        }
+        return {
+            service: 'Blog Backend API',
+            function: 'verificar credito',
+            message: 'Funcion para verificar credito',
+            edad: edad,
+            ingresos: ingresos,
+            historialCrediticio: historialCrediticio,
+            aprobarCredito: aprobarCredito
+        };
+    }
 }
