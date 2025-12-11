@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -8,10 +9,13 @@ import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
 import { PostsModule } from './posts/posts.module';
 import { BasicsModule } from './basics/basics.module';
+import { MailModule } from './mail/mail.module';
+import { CursosModule } from './cursos/cursos.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
+    MongooseModule.forRoot('mongodb://localhost:27017/cursos_db'),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DB_HOST,
@@ -21,16 +25,16 @@ import { BasicsModule } from './basics/basics.module';
       database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
-      //ssl: { rejectUnauthorized: false },
     }),
     AuthModule,
+    CursosModule,
     UsersModule,
     CategoriesModule,
     PostsModule,
     BasicsModule,
+    MailModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
-  
